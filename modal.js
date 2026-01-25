@@ -290,6 +290,15 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("modalTitle").textContent = component.name;
             document.getElementById("modalDescription").innerHTML = `<strong>Brand:</strong> ${component.brand}<br><br>${component.description}`;
             document.getElementById("modalPrice").textContent = component.price;
+            
+            // Set the modal image to logo.jpg
+            const modalImageSource = document.getElementById("modalImageSource");
+            const modalImage = document.getElementById("modalImage");
+            if (modalImageSource && modalImage) {
+                modalImageSource.srcset = "logo.jpg";
+                modalImage.src = "logo.jpg";
+                modalImage.alt = component.name;
+            }
 
             const productModal = new bootstrap.Modal(document.getElementById("productModal"));
             productModal.show();
