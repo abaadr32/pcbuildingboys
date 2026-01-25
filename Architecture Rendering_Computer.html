@@ -23,7 +23,10 @@
 
         <nav class="navigation">
             <a href="index.html" class="logo">
-                <img src="logo.jpg" alt="logo">
+                <picture>
+                    <source srcset="logo.jpg" type="image/jpeg">
+                    <img src="logo.jpg" alt="logo">
+                </picture>
             </a>
 
             <button class="menu-toggle" id="menu-toggle">
@@ -62,15 +65,307 @@
             <div class="col-md-4 offset-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <h2 class="text-center">Architecture Rendering</h2>
+                        <h2 class="text-center">High-End Architectural Rendering Workstation</h2>
+                        <p class="text-center">Budget: $2000</p>
                     </div>
                 </div>
             </div>
         </div>
 
-            <div class="row mt-4" id="productsContainer">
-              <!-- Products will be loaded here by JavaScript -->
+        <!-- Chassis Section -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <h3 class="mb-3">Chassis</h3>
             </div>
+            <div class="col-6 col-md-4 mb-3 d-flex">
+                <div class="card" data-id="chassis-1">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="Fractal Design Meshify 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Fractal Design Meshify 2</h5>
+                        <p class="card-text"><strong>Brand:</strong> Fractal Design</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <p class="price mb-2">$150.00</p>
+                        <button class="btn btn-sm btn-primary">Select</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-3 d-flex">
+                <div class="card" data-id="chassis-2">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="Lian Li PC-O11 Dynamic">
+                    <div class="card-body">
+                        <h5 class="card-title">Lian Li PC-O11 Dynamic</h5>
+                        <p class="card-text"><strong>Brand:</strong> Lian Li</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <p class="price mb-2">$160.00</p>
+                        <button class="btn btn-sm btn-primary">Select</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-3 d-flex">
+                <div class="card" data-id="chassis-3">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="NZXT H7 Flow">
+                    <div class="card-body">
+                        <h5 class="card-title">NZXT H7 Flow</h5>
+                        <p class="card-text"><strong>Brand:</strong> NZXT</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <p class="price mb-2">$140.00</p>
+                        <button class="btn btn-sm btn-primary">Select</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CPU Section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="mb-3">CPU (Processor)</h3>
+            </div>
+            <div class="col-6 col-md-4 mb-3 d-flex">
+                <div class="card" data-id="cpu-1">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="AMD Ryzen 9 7950X">
+                    <div class="card-body">
+                        <h5 class="card-title">AMD Ryzen 9 7950X</h5>
+                        <p class="card-text"><strong>Brand:</strong> AMD</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <p class="price mb-2">$580.00</p>
+                        <button class="btn btn-sm btn-primary">Select</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-3 d-flex">
+                <div class="card" data-id="cpu-2">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="AMD Ryzen 9 7900X">
+                    <div class="card-body">
+                        <h5 class="card-title">AMD Ryzen 9 7900X</h5>
+                        <p class="card-text"><strong>Brand:</strong> AMD</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <p class="price mb-2">$480.00</p>
+                        <button class="btn btn-sm btn-primary">Select</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-3 d-flex">
+                <div class="card" data-id="cpu-3">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="Intel Core i9-13900K">
+                    <div class="card-body">
+                        <h5 class="card-title">Intel Core i9-13900K</h5>
+                        <p class="card-text"><strong>Brand:</strong> Intel</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <p class="price mb-2">$600.00</p>
+                        <button class="btn btn-sm btn-primary">Select</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-3 d-flex">
+                <div class="card" data-id="cpu-4">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="Intel Core i9-12900K">
+                    <div class="card-body">
+                        <h5 class="card-title">Intel Core i9-12900K</h5>
+                        <p class="card-text"><strong>Brand:</strong> Intel</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <p class="price mb-2">$520.00</p>
+                        <button class="btn btn-sm btn-primary">Select</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-3 d-flex">
+                <div class="card" data-id="cpu-5">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="AMD Threadripper 3960X">
+                    <div class="card-body">
+                        <h5 class="card-title">AMD Threadripper 3960X</h5>
+                        <p class="card-text"><strong>Brand:</strong> AMD</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <p class="price mb-2">$900.00</p>
+                        <button class="btn btn-sm btn-primary">Select</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Motherboard Section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="mb-3">Motherboard</h3>
+            </div>
+            <div class="col-6 col-md-4 mb-3 d-flex">
+                <div class="card" data-id="mobo-1">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="ASUS ProArt X670E-Creator">
+                    <div class="card-body">
+                        <h5 class="card-title">ASUS ProArt X670E-Creator</h5>
+                        <p class="card-text"><strong>Brand:</strong> ASUS</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <p class="price mb-2">$500.00</p>
+                        <button class="btn btn-sm btn-primary">Select</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-3 d-flex">
+                <div class="card" data-id="mobo-2">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="MSI MEG X670E ACE">
+                    <div class="card-body">
+                        <h5 class="card-title">MSI MEG X670E ACE</h5>
+                        <p class="card-text"><strong>Brand:</strong> MSI</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <p class="price mb-2">$480.00</p>
+                        <button class="btn btn-sm btn-primary">Select</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-3 d-flex">
+                <div class="card" data-id="mobo-3">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="Gigabyte X670E AORUS Master">
+                    <div class="card-body">
+                        <h5 class="card-title">Gigabyte X670E AORUS Master</h5>
+                        <p class="card-text"><strong>Brand:</strong> Gigabyte</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <p class="price mb-2">$460.00</p>
+                        <button class="btn btn-sm btn-primary">Select</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Memory Section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="mb-3">Memory (RAM)</h3>
+            </div>
+            <div class="col-6 col-md-4 mb-3 d-flex">
+                <div class="card" data-id="mem-1">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="Corsair Vengeance 64GB DDR5">
+                    <div class="card-body">
+                        <h5 class="card-title">Corsair Vengeance 64GB DDR5</h5>
+                        <p class="card-text"><strong>Brand:</strong> Corsair</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <p class="price mb-2">$260.00</p>
+                        <button class="btn btn-sm btn-primary">Select</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-3 d-flex">
+                <div class="card" data-id="mem-2">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="G.Skill Trident Z5 64GB">
+                    <div class="card-body">
+                        <h5 class="card-title">G.Skill Trident Z5 64GB</h5>
+                        <p class="card-text"><strong>Brand:</strong> G.Skill</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <p class="price mb-2">$250.00</p>
+                        <button class="btn btn-sm btn-primary">Select</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-3 d-flex">
+                <div class="card" data-id="mem-3">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="Kingston Fury Beast 64GB">
+                    <div class="card-body">
+                        <h5 class="card-title">Kingston Fury Beast 64GB</h5>
+                        <p class="card-text"><strong>Brand:</strong> Kingston</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <p class="price mb-2">$240.00</p>
+                        <button class="btn btn-sm btn-primary">Select</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GPU Section -->
+        <div class="row mt-5 mb-5">
+            <div class="col-12">
+                <h3 class="mb-3">GPU (Graphics Card)</h3>
+            </div>
+            <div class="col-6 col-md-4 mb-3 d-flex">
+                <div class="card" data-id="gpu-1">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="NVIDIA RTX 4090">
+                    <div class="card-body">
+                        <h5 class="card-title">NVIDIA RTX 4090</h5>
+                        <p class="card-text"><strong>Brand:</strong> NVIDIA</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <p class="price mb-2">$1600.00</p>
+                        <button class="btn btn-sm btn-primary">Select</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-3 d-flex">
+                <div class="card" data-id="gpu-2">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="NVIDIA RTX 4080 Super">
+                    <div class="card-body">
+                        <h5 class="card-title">NVIDIA RTX 4080 Super</h5>
+                        <p class="card-text"><strong>Brand:</strong> NVIDIA</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <p class="price mb-2">$1200.00</p>
+                        <button class="btn btn-sm btn-primary">Select</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-3 d-flex">
+                <div class="card" data-id="gpu-3">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="NVIDIA RTX 4070 Ti">
+                    <div class="card-body">
+                        <h5 class="card-title">NVIDIA RTX 4070 Ti</h5>
+                        <p class="card-text"><strong>Brand:</strong> NVIDIA</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <p class="price mb-2">$900.00</p>
+                        <button class="btn btn-sm btn-primary">Select</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-3 d-flex">
+                <div class="card" data-id="gpu-4">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="AMD Radeon RX 7900 XTX">
+                    <div class="card-body">
+                        <h5 class="card-title">AMD Radeon RX 7900 XTX</h5>
+                        <p class="card-text"><strong>Brand:</strong> AMD</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <p class="price mb-2">$950.00</p>
+                        <button class="btn btn-sm btn-primary">Select</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-3 d-flex">
+                <div class="card" data-id="gpu-5">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="NVIDIA RTX A4000">
+                    <div class="card-body">
+                        <h5 class="card-title">NVIDIA RTX A4000</h5>
+                        <p class="card-text"><strong>Brand:</strong> NVIDIA</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <p class="price mb-2">$1000.00</p>
+                        <button class="btn btn-sm btn-primary">Select</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-3 d-flex">
+                <div class="card" data-id="gpu-6">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="NVIDIA RTX A5000">
+                    <div class="card-body">
+                        <h5 class="card-title">NVIDIA RTX A5000</h5>
+                        <p class="card-text"><strong>Brand:</strong> NVIDIA</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <p class="price mb-2">$1800.00</p>
+                        <button class="btn btn-sm btn-primary">Select</button>
+                    </div>
+                </div>
+            </div>
+        </div>
           </div>
    
     
@@ -83,7 +378,10 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                   </div>
                   <div class="modal-body">
-                      <img id="modalImage" class="img-fluid rounded mb-3" alt="">
+                      <picture>
+                          <source id="modalImageSource" type="image/jpeg">
+                          <img id="modalImage" class="img-fluid rounded mb-3" alt="">
+                      </picture>
                       <p id="modalDescription"></p>
                       <p class="price"><strong>Price:</strong> <span id="modalPrice"></span></p>
                       <p id="modalShipping" class="text-primary" style="display: none;"></p> <!-- Shipping information -->
@@ -102,66 +400,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-        // Load architecture rendering products from JSON
-        async function loadArchitectureProducts() {
-            try {
-                const response = await fetch('architecture.json');
-                const data = await response.json();
-                const container = document.getElementById('productsContainer');
-                container.innerHTML = '';
-
-                // Get the first build type
-                const buildType = data.buildTypes[0];
-                const parts = buildType.parts;
-
-                // Iterate through each category (CPU, GPU)
-                Object.keys(parts).forEach((category, categoryIndex) => {
-                    const items = parts[category];
-                    
-                    // Add category heading
-                    const categoryRow = document.createElement('div');
-                    categoryRow.className = 'row mt-4 w-100 mx-0';
-                    categoryRow.innerHTML = `
-                        <div class="col-12">
-                            <h3 class="mb-3" style="color: var(--secondary-color);">${category}</h3>
-                        </div>
-                    `;
-                    container.appendChild(categoryRow);
-                    
-                    // Add product cards for each part in the category
-                    const productsRow = document.createElement('div');
-                    productsRow.className = 'row w-100 mx-0 mb-4';
-                    
-                    items.forEach((part, index) => {
-                        const card = document.createElement('div');
-                        card.className = 'col-6 col-md-4 mb-3 d-flex';
-                        card.innerHTML = `
-                            <div class="card w-100" data-id="${category}-${index}">
-                                <img src="${part.image}" class="img-fluid rounded" alt="${part.name}" style="height: 200px; object-fit: cover;">
-                                <div class="card-body">
-                                    <h5 class="card-title">${part.name}</h5>
-                                    <p class="card-text">${part.brand}</p>
-                                </div>
-                                <div class="card-footer bg-white border-0">
-                                    <p class="price mb-2">$${part.price.toFixed(2)}</p>
-                                </div>
-                            </div>
-                        `;
-                        productsRow.appendChild(card);
-                    });
-                    
-                    container.appendChild(productsRow);
-                });
-            } catch (error) {
-                console.error('Error loading products:', error);
-                document.getElementById('productsContainer').innerHTML = '<p class="text-danger">Error loading products</p>';
-            }
-        }
-
-        // Load products when page loads
-        document.addEventListener('DOMContentLoaded', loadArchitectureProducts);
-    </script>
 
     <script src="index.js"></script>
     <script src="modal.js"></script>
