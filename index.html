@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Builder - Build Your Perfect Computer</title>
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="image.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+  </head>
+
+<body>
+    <div class="main-content">
+    <header id="header">
+        <div class="header-top-bar">
+            <span> PC Builder - Build Your Perfect Computer</span>
+        </div>
+
+        <nav class="navigation">
+            <a href="index.html" class="logo">
+                <img src="logo.jpg" alt="logo">
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="menu" id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" id="dropdown-toggle">PC Types <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="Professional_Use_Computer.html">Professional Use</a>
+                            <a href="Home_Computer.html">Home Computer</a>
+                            <a href="School_Computer.html">School Computer</a>
+                            <a href="Mid-Tier_Gaming_Computer.html">Mid-Tier Gaming</a>
+                            <a href="Architecture Rendering_Computer.html">Architecture Rendering</a>
+                        </div>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+            <div class="right-nav">
+                <a href="#" class="nav-cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+<section class="text-center py-5">
+    <div class="container">
+        <h2>Welcome to PC Builder</h2>
+        <p>Build your perfect computer with our curated PC configurations for every need.</p>
+    </div>
+</section>
+
+<section class="py-5 bg-light ">
+    <div class="container">
+        <h2 class="text-center mb-4">Featured PC Builds</h2>
+        <div class="slider-container d-flex justify-content-center align-items-center">
+            <div class="slider heart-shape">
+                <div class="product">
+                    <img src="logo.jpg" alt="Professional PC" class="img-fluid">
+                    <h3>Professional Workstation</h3>
+                    <p>Price: $1,299.00</p>
+                </div>
+                <div class="product">
+                    <img src="logo.jpg" alt="Gaming PC" class="img-fluid">
+                    <h3>Gaming Beast</h3>
+                    <p>Price: $1,799.00</p>
+                </div>
+                <div class="product">
+                    <img src="logo.jpg" alt="Home PC" class="img-fluid">
+                    <h3>Home Office Setup</h3>
+                    <p>Price: $599.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  
+
+    <footer class="text-center py-3 mt-4">
+        <p>&copy; 2026 IT BOAIS WEB DEVELOPMENT</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+    <script src="scroll.js"></script>
+        
+
+    <script>
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slider = document.querySelector('.slider' );
+            const totalSlides = document.querySelectorAll('.product').length;
+            if (index >= totalSlides) currentIndex = 0;
+            else if (index < 0) currentIndex = totalSlides - 1;
+            else currentIndex = index;
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function nextSlide() { showSlide(currentIndex + 1); }
+        function prevSlide() { showSlide(currentIndex - 1); }
+
+        function autoSlide() {
+            nextSlide();
+            setTimeout(autoSlide, 3000);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(autoSlide, 3000);
+        });
+    </script>
+   
+      
+      
+</body>
+</html>

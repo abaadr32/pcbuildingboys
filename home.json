@@ -1,0 +1,104 @@
+[
+  {
+    "category": "Home Computer",
+    "budget": 550,
+    "parts": {
+      "Chassis": [
+        {"name": "Cooler Master MasterBox Q300L", "brand": "Cooler Master", "price": 50, "image": "https://via.placeholder.com/150"},
+        {"name": "Thermaltake Versa H15", "brand": "Thermaltake", "price": 40, "image": "https://via.placeholder.com/150"},
+        {"name": "Corsair 110R", "brand": "Corsair", "price": 45, "image": "https://via.placeholder.com/150"},
+        {"name": "NZXT H210", "brand": "NZXT", "price": 70, "image": "https://via.placeholder.com/150"},
+        {"name": "Fractal Design Focus G Mini", "brand": "Fractal Design", "price": 55, "image": "https://via.placeholder.com/150"},
+        {"name": "Deepcool Matrexx 30", "brand": "Deepcool", "price": 35, "image": "https://via.placeholder.com/150"},
+        {"name": "Thermaltake H100 Mini", "brand": "Thermaltake", "price": 60, "image": "https://via.placeholder.com/150"},
+        {"name": "Cooler Master MasterBox Q500L", "brand": "Cooler Master", "price": 65, "image": "https://via.placeholder.com/150"},
+        {"name": "Corsair Carbide Series 175R", "brand": "Corsair", "price": 50, "image": "https://via.placeholder.com/150"},
+        {"name": "NZXT H510 Flow", "brand": "NZXT", "price": 75, "image": "https://via.placeholder.com/150"}
+      ],
+      "CPU": [
+        {"name": "Intel Core i3-12100", "brand": "Intel", "price": 120, "image": "https://via.placeholder.com/150"},
+        {"name": "AMD Ryzen 3 4100", "brand": "AMD", "price": 100, "image": "https://via.placeholder.com/150"},
+        {"name": "Intel Pentium Gold G7400", "brand": "Intel", "price": 70, "image": "https://via.placeholder.com/150"},
+        {"name": "AMD Athlon 3000G", "brand": "AMD", "price": 55, "image": "https://via.placeholder.com/150"},
+        {"name": "Intel Core i3-10105", "brand": "Intel", "price": 110, "image": "https://via.placeholder.com/150"},
+        {"name": "AMD Ryzen 3 3200G", "brand": "AMD", "price": 95, "image": "https://via.placeholder.com/150"},
+        {"name": "Intel Pentium Gold G6400", "brand": "Intel", "price": 65, "image": "https://via.placeholder.com/150"},
+        {"name": "AMD Athlon 220GE", "brand": "AMD", "price": 50, "image": "https://via.placeholder.com/150"},
+        {"name": "Intel Celeron G5920", "brand": "Intel", "price": 55, "image": "https://via.placeholder.com/150"},
+        {"name": "AMD Ryzen 5 3400G", "brand": "AMD", "price": 130, "image": "https://via.placeholder.com/150"}
+      ],
+      "Motherboard": [
+        {"name": "ASRock B660M Pro RS", "brand": "ASRock", "price": 90, "image": "https://via.placeholder.com/150"},
+        {"name": "MSI H610M PRO", "brand": "MSI", "price": 85, "image": "https://via.placeholder.com/150"},
+        {"name": "Gigabyte H610M S2", "brand": "Gigabyte", "price": 80, "image": "https://via.placeholder.com/150"},
+        {"name": "ASUS Prime B660M-A", "brand": "ASUS", "price": 95, "image": "https://via.placeholder.com/150"},
+        {"name": "MSI B550M PRO-VDH", "brand": "MSI", "price": 100, "image": "https://via.placeholder.com/150"},
+        {"name": "ASRock A320M-HDV R4.0", "brand": "ASRock", "price": 70, "image": "https://via.placeholder.com/150"},
+        {"name": "Gigabyte B450M DS3H", "brand": "Gigabyte", "price": 75, "image": "https://via.placeholder.com/150"},
+        {"name": "MSI A520M-A Pro", "brand": "MSI", "price": 80, "image": "https://via.placeholder.com/150"},
+        {"name": "ASUS Prime A520M-K", "brand": "ASUS", "price": 85, "image": "https://via.placeholder.com/150"},
+        {"name": "Biostar B450MH", "brand": "Biostar", "price": 65, "image": "https://via.placeholder.com/150"}
+      ],
+      "Memory": [
+        {"name": "Kingston 16GB DDR4", "brand": "Kingston", "price": 60, "image": "https://via.placeholder.com/150"},
+        {"name": "Corsair Vengeance 16GB DDR4", "brand": "Corsair", "price": 65, "image": "https://via.placeholder.com/150"},
+        {"name": "Crucial 16GB DDR4", "brand": "Crucial", "price": 55, "image": "https://via.placeholder.com/150"},
+        {"name": "G.Skill Ripjaws 16GB DDR4", "brand": "G.Skill", "price": 60, "image": "https://via.placeholder.com/150"},
+        {"name": "TeamGroup T-Force 16GB DDR4", "brand": "TeamGroup", "price": 58, "image": "https://via.placeholder.com/150"},
+        {"name": "ADATA XPG 16GB DDR4", "brand": "ADATA", "price": 57, "image": "https://via.placeholder.com/150"},
+        {"name": "Patriot Viper 16GB DDR4", "brand": "Patriot", "price": 59, "image": "https://via.placeholder.com/150"},
+        {"name": "Thermaltake TOUGHRAM 16GB DDR4", "brand": "Thermaltake", "price": 61, "image": "https://via.placeholder.com/150"},
+        {"name": "Corsair LPX 16GB DDR4", "brand": "Corsair", "price": 55, "image": "https://via.placeholder.com/150"},
+        {"name": "Kingston HyperX Fury 16GB DDR4", "brand": "Kingston", "price": 60, "image": "https://via.placeholder.com/150"}
+      ],
+      "GPU": [
+        {"name": "Integrated Intel UHD 730", "brand": "Intel", "price": 0, "image": "https://via.placeholder.com/150"},
+        {"name": "Integrated AMD Vega 8", "brand": "AMD", "price": 0, "image": "https://via.placeholder.com/150"},
+        {"name": "NVIDIA GT 1030 2GB", "brand": "NVIDIA", "price": 90, "image": "https://via.placeholder.com/150"},
+        {"name": "AMD Radeon RX 550 2GB", "brand": "AMD", "price": 80, "image": "https://via.placeholder.com/150"},
+        {"name": "NVIDIA GTX 1050 Ti 4GB", "brand": "NVIDIA", "price": 120, "image": "https://via.placeholder.com/150"},
+        {"name": "AMD Radeon RX 560 4GB", "brand": "AMD", "price": 110, "image": "https://via.placeholder.com/150"},
+        {"name": "Intel Iris Xe Graphics", "brand": "Intel", "price": 0, "image": "https://via.placeholder.com/150"},
+        {"name": "AMD Radeon Vega 11", "brand": "AMD", "price": 0, "image": "https://via.placeholder.com/150"},
+        {"name": "NVIDIA GTX 1650", "brand": "NVIDIA", "price": 150, "image": "https://via.placeholder.com/150"},
+        {"name": "AMD Radeon RX 570", "brand": "AMD", "price": 140, "image": "https://via.placeholder.com/150"}
+      ],
+      "Storage": [
+        {"name": "Kingston A2000 500GB NVMe SSD", "brand": "Kingston", "price": 40, "image": "https://via.placeholder.com/150"},
+        {"name": "WD Green 480GB SSD", "brand": "WD", "price": 45, "image": "https://via.placeholder.com/150"},
+        {"name": "Crucial P2 500GB NVMe SSD", "brand": "Crucial", "price": 42, "image": "https://via.placeholder.com/150"},
+        {"name": "Samsung 870 EVO 500GB SATA SSD", "brand": "Samsung", "price": 50, "image": "https://via.placeholder.com/150"},
+        {"name": "WD Blue 500GB SATA SSD", "brand": "WD", "price": 48, "image": "https://via.placeholder.com/150"},
+        {"name": "Crucial MX500 500GB SATA SSD", "brand": "Crucial", "price": 47, "image": "https://via.placeholder.com/150"},
+        {"name": "ADATA SU800 512GB SSD", "brand": "ADATA", "price": 45, "image": "https://via.placeholder.com/150"},
+        {"name": "TeamGroup GX2 512GB SSD", "brand": "TeamGroup", "price": 44, "image": "https://via.placeholder.com/150"},
+        {"name": "Kingston UV500 480GB SSD", "brand": "Kingston", "price": 43, "image": "https://via.placeholder.com/150"},
+        {"name": "PNY CS900 480GB SSD", "brand": "PNY", "price": 42, "image": "https://via.placeholder.com/150"}
+      ],
+      "Power Supply": [
+        {"name": "EVGA 500 W1, 80+", "brand": "EVGA", "price": 50, "image": "https://via.placeholder.com/150"},
+        {"name": "Corsair VS450 450W", "brand": "Corsair", "price": 45, "image": "https://via.placeholder.com/150"},
+        {"name": "Thermaltake Smart 500W", "brand": "Thermaltake", "price": 48, "image": "https://via.placeholder.com/150"},
+        {"name": "Cooler Master MWE 450W", "brand": "Cooler Master", "price": 46, "image": "https://via.placeholder.com/150"},
+        {"name": "Be Quiet! System Power 9 400W", "brand": "Be Quiet!", "price": 47, "image": "https://via.placeholder.com/150"},
+        {"name": "Corsair CV550 550W", "brand": "Corsair", "price": 52, "image": "https://via.placeholder.com/150"},
+        {"name": "EVGA 600 W1, 80+", "brand": "EVGA", "price": 55, "image": "https://via.placeholder.com/150"},
+        {"name": "Thermaltake Smart 600W", "brand": "Thermaltake", "price": 50, "image": "https://via.placeholder.com/150"},
+        {"name": "Cooler Master MWE 500W", "brand": "Cooler Master", "price": 48, "image": "https://via.placeholder.com/150"},
+        {"name": "Corsair VS550 550W", "brand": "Corsair", "price": 53, "image": "https://via.placeholder.com/150"}
+      ],
+      "Cooling": [
+        {"name": "Stock CPU Cooler", "brand": "Intel/AMD", "price": 0, "image": "https://via.placeholder.com/150"},
+        {"name": "Cooler Master Hyper 212 Black Edition", "brand": "Cooler Master", "price": 35, "image": "https://via.placeholder.com/150"},
+        {"name": "Thermaltake UX100 ARGB", "brand": "Thermaltake", "price": 25, "image": "https://via.placeholder.com/150"},
+        {"name": "Deepcool Gammaxx 400", "brand": "Deepcool", "price": 30, "image": "https://via.placeholder.com/150"},
+        {"name": "Arctic Freezer 34 eSports DUO", "brand": "Arctic", "price": 40, "image": "https://via.placeholder.com/150"},
+        {"name": "Noctua NH-U12S Redux", "brand": "Noctua", "price": 45, "image": "https://via.placeholder.com/150"},
+        {"name": "be quiet! Pure Rock 2", "brand": "Be Quiet!", "price": 38, "image": "https://via.placeholder.com/150"},
+        {"name": "Corsair A500", "brand": "Corsair", "price": 50, "image": "https://via.placeholder.com/150"},
+        {"name": "Cooler Master Hyper 212 RGB", "brand": "Cooler Master", "price": 37, "image": "https://via.placeholder.com/150"},
+        {"name": "Deepcool Assassin III", "brand": "Deepcool", "price": 55, "image": "https://via.placeholder.com/150"}
+      ]
+    }
+  }
+]

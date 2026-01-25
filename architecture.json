@@ -1,0 +1,54 @@
+{
+  "buildTypes": [
+    {
+      "category": "High-End Architectural Rendering Workstation",
+      "budget": 10000,
+      "parts": {
+        "CPU": [
+          {"name": "AMD Ryzen 9 7950X", "brand": "AMD", "price": 700, "image": "https://via.placeholder.com/150"},
+          {"name": "Intel Core i9-14900K", "brand": "Intel", "price": 850, "image": "https://via.placeholder.com/150"},
+          {"name": "AMD Ryzen Threadripper PRO 5995WX", "brand": "AMD", "price": 6500, "image": "https://via.placeholder.com/150"},
+          {"name": "Intel Xeon W-3400", "brand": "Intel", "price": 3000, "image": "https://via.placeholder.com/150"},
+          {"name": "AMD Ryzen 9 7950X3D", "brand": "AMD", "price": 750, "image": "https://via.placeholder.com/150"},
+          {"name": "Intel Core i7-14700K", "brand": "Intel", "price": 550, "image": "https://via.placeholder.com/150"},
+          {"name": "AMD Ryzen 7 7800X3D", "brand": "AMD", "price": 500, "image": "https://via.placeholder.com/150"},
+          {"name": "Intel Xeon W-2295", "brand": "Intel", "price": 1200, "image": "https://via.placeholder.com/150"},
+          {"name": "AMD Ryzen 9 7900X", "brand": "AMD", "price": 650, "image": "https://via.placeholder.com/150"},
+          {"name": "Intel Core i9-13900KS", "brand": "Intel", "price": 700, "image": "https://via.placeholder.com/150"},
+          {"name": "AMD Ryzen Threadripper 3970X", "brand": "AMD", "price": 2000, "image": "https://via.placeholder.com/150"},
+          {"name": "Intel Core i7-13700K", "brand": "Intel", "price": 450, "image": "https://via.placeholder.com/150"},
+          {"name": "AMD Ryzen 9 7900", "brand": "AMD", "price": 600, "image": "https://via.placeholder.com/150"},
+          {"name": "Intel Xeon W-3175X", "brand": "Intel", "price": 4000, "image": "https://via.placeholder.com/150"},
+          {"name": "AMD Ryzen 9 5950X", "brand": "AMD", "price": 750, "image": "https://via.placeholder.com/150"},
+          {"name": "Intel Core i9-12900K", "brand": "Intel", "price": 600, "image": "https://via.placeholder.com/150"},
+          {"name": "AMD Ryzen 9 5900X", "brand": "AMD", "price": 550, "image": "https://via.placeholder.com/150"},
+          {"name": "Intel Core i7-12700K", "brand": "Intel", "price": 450, "image": "https://via.placeholder.com/150"},
+          {"name": "AMD Ryzen 9 5900", "brand": "AMD", "price": 500, "image": "https://via.placeholder.com/150"},
+          {"name": "Intel Core i9-11900K", "brand": "Intel", "price": 400, "image": "https://via.placeholder.com/150"}
+        ],
+        "GPU": [
+          {"name": "NVIDIA RTX 5090", "brand": "NVIDIA", "price": 4500, "image": "https://via.placeholder.com/150"},
+          {"name": "NVIDIA RTX 6000 Ada", "brand": "NVIDIA", "price": 6500, "image": "https://via.placeholder.com/150"},
+          {"name": "NVIDIA RTX 4080 Ti", "brand": "NVIDIA", "price": 3000, "image": "https://via.placeholder.com/150"},
+          {"name": "AMD Radeon PRO W7900X", "brand": "AMD", "price": 4000, "image": "https://via.placeholder.com/150"},
+          {"name": "NVIDIA RTX 4090", "brand": "NVIDIA", "price": 2500, "image": "https://via.placeholder.com/150"},
+          {"name": "NVIDIA RTX A6000", "brand": "NVIDIA", "price": 5500, "image": "https://via.placeholder.com/150"},
+          {"name": "AMD Radeon PRO W6800", "brand": "AMD", "price": 3000, "image": "https://via.placeholder.com/150"},
+          {"name": "NVIDIA RTX 4070 Ti", "brand": "NVIDIA", "price": 1200, "image": "https://via.placeholder.com/150"},
+          {"name": "AMD Radeon RX 7900 XTX", "brand": "AMD", "price": 1200, "image": "https://via.placeholder.com/150"},
+          {"name": "NVIDIA RTX 3090 Ti", "brand": "NVIDIA", "price": 2000, "image": "https://via.placeholder.com/150"},
+          {"name": "NVIDIA RTX 5080", "brand": "NVIDIA", "price": 3500, "image": "https://via.placeholder.com/150"},
+          {"name": "AMD Radeon PRO W6800", "brand": "AMD", "price": 2500, "image": "https://via.placeholder.com/150"},
+          {"name": "NVIDIA RTX 5070 Ti", "brand": "NVIDIA", "price": 2000, "image": "https://via.placeholder.com/150"},
+          {"name": "NVIDIA RTX 5000 Ada", "brand": "NVIDIA", "price": 4000, "image": "https://via.placeholder.com/150"},
+          {"name": "AMD Radeon PRO W6600", "brand": "AMD", "price": 1500, "image": "https://via.placeholder.com/150"},
+          {"name": "NVIDIA RTX 4070", "brand": "NVIDIA", "price": 900, "image": "https://via.placeholder.com/150"},
+          {"name": "AMD Radeon RX 6800", "brand": "AMD", "price": 900, "image": "https://via.placeholder.com/150"},
+          {"name": "NVIDIA RTX 4060 Ti", "brand": "NVIDIA", "price": 650, "image": "https://via.placeholder.com/150"},
+          {"name": "AMD Radeon RX 6700 XT", "brand": "AMD", "price": 600, "image": "https://via.placeholder.com/150"},
+          {"name": "NVIDIA RTX 4050", "brand": "NVIDIA", "price": 400, "image": "https://via.placeholder.com/150"}
+        ]
+      }
+    }
+  ]
+}

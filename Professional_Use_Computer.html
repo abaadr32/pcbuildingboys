@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Builder | Professional Use Computer</title>
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="image.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="main-content">
+    <header id="header">
+        <div class="header-top-bar">
+            <span>PC Builder - Build Your Perfect Computer</span>
+        </div>
+
+        <nav class="navigation">
+            <a href="index.html" class="logo">
+                <img src="logo.jpg" alt="logo">
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="menu" id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" id="dropdown-toggle">PC Types <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="Professional_Use_Computer.html">Professional Use</a>
+                            <a href="Home_Computer.html">Home Computer</a>
+                            <a href="School_Computer.html">School Computer</a>
+                            <a href="Mid-Tier_Gaming_Computer.html">Mid-Tier Gaming</a>
+                            <a href="Architecture Rendering_Computer.html">Architecture Rendering</a>
+                        </div>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+            <div class="right-nav">
+                <a href="#" class="nav-cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="text-center">Professional Use</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="row mt-4" id="productsContainer">
+              <!-- Products will be loaded here by JavaScript -->
+            </div>
+          </div>
+   
+    
+        <!-- Modal -->
+<div id="productModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" class="img-fluid rounded mb-3" alt="">
+                <p id="modalDescription"></p>
+                <p class="price"><strong>Price:</strong> <span id="modalPrice"></span></p>
+                <p id="modalShipping" class="text-primary" style="display: none;"></p> <!-- Shipping information -->
+                <p id="modalSizes" style="display: none;"></p> <!-- Placeholder for sizes -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <footer class="text-center py-3 mt-4">
+            <p>&copy; 2026 IT BOAIS WEB DEVELOPMENT</p>
+        </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Load professional computer products from JSON
+        async function loadProfessionalProducts() {
+            try {
+                const response = await fetch('professional.json');
+                const data = await response.json();
+                const container = document.getElementById('productsContainer');
+                container.innerHTML = '';
+
+                // Iterate through each category
+                Object.keys(data.parts).forEach((category, categoryIndex) => {
+                    const parts = data.parts[category];
+                    
+                    // Add category heading
+                    const categoryRow = document.createElement('div');
+                    categoryRow.className = 'row mt-4 w-100 mx-0';
+                    categoryRow.innerHTML = `
+                        <div class="col-12">
+                            <h3 class="mb-3" style="color: var(--secondary-color);">${category}</h3>
+                        </div>
+                    `;
+                    container.appendChild(categoryRow);
+                    
+                    // Add product cards for each part in the category
+                    const productsRow = document.createElement('div');
+                    productsRow.className = 'row w-100 mx-0 mb-4';
+                    
+                    parts.forEach((part, index) => {
+                        const card = document.createElement('div');
+                        card.className = 'col-6 col-md-4 mb-3 d-flex';
+                        card.innerHTML = `
+                            <div class="card w-100" data-id="${category}-${index}">
+                                <img src="${part.image}" class="img-fluid rounded" alt="${part.name}" style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">${part.name}</h5>
+                                    <p class="card-text">${part.brand}</p>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <p class="price mb-2">$${part.price.toFixed(2)}</p>
+                                </div>
+                            </div>
+                        `;
+                        productsRow.appendChild(card);
+                    });
+                    
+                    container.appendChild(productsRow);
+                });
+            } catch (error) {
+                console.error('Error loading products:', error);
+                document.getElementById('productsContainer').innerHTML = '<p class="text-danger">Error loading products</p>';
+            }
+        }
+
+        // Load products when page loads
+        document.addEventListener('DOMContentLoaded', loadProfessionalProducts);
+    </script>
+
+    <script src="index.js"></script>
+    <script src="modal.js"></script>
+    <script src="scroll.js"></script>
+        
+    
+</body>
+</html>
