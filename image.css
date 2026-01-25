@@ -19,19 +19,17 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 .card:active {
     transform: translateY(-5px); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .card img {
-    width: 100%;          /* makes the image take the full width of the card */
-    height: 400px;        /* forces same height for all */
-    object-fit: cover;    /* crops without distorting the image */
-  }
-
- 
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
 
 .card-body {
     padding: 15px;
@@ -39,6 +37,7 @@
 
 .card-title {
     font-size: 1rem;
+    font-weight: 600;
 }
 
 .card-text {
@@ -47,78 +46,53 @@
 
 .price {
     font-size: 1rem;
+    font-weight: bold;
+    color: #d32f2f;
 }
 
 .card-footer {
     display: flex;
     gap: 10px;
     align-items: center;
+    padding: 0 15px 15px;
+    background: none;
+    border: none;
 }
 
 @media (max-width: 768px) {
     .card {
-        height: auto;
         width: 100%;
         margin: 10px 0;
-        display: flex;
         flex-direction: row;
-        overflow: hidden;
     }
 
     .card img {
         width: 140px;
         height: 140px;
         min-width: 140px;
-        object-fit: cover;
         border-radius: 8px;
     }
 
     .card-body {
         padding: 12px;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
     }
 
     .card-title {
         font-size: 0.95rem;
-        font-weight: 600;
-        margin-bottom: 5px;
-        line-height: 1.3;
     }
 
     .card-text {
         font-size: 0.8rem;
-        margin-bottom: 5px;
         color: #666;
     }
 
     .price {
-        font-size: 1rem;
-        font-weight: bold;
-        color: #d32f2f;
-        margin-bottom: 8px;
-    }
-
-    .card-footer {
-        padding: 0;
-        background: none;
-        border: none;
-        display: flex;
-        gap: 8px;
-        align-items: center;
-        width: 100%;
+        font-size: 0.95rem;
     }
 
     .card-footer .btn {
         padding: 6px 12px;
         font-size: 0.85rem;
         white-space: nowrap;
-    }
-
-    .card img:active {
-        opacity: 0.5;
-        transition: opacity 0.3s ease-in-out;
     }
 }
