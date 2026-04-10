@@ -1,145 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PC Builder - Build Your Perfect Computer</title>
-    <link rel="icon" href="logo.jpg" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="image.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  
-  </head>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC Building Boys — Build Your Perfect Computer</title>
+  <link rel="icon" href="logo.jpg" type="image/jpeg">
+  <!-- Google Fonts loaded in CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
 <body>
-    <div class="main-content">
-    <header id="header">
-        <div class="header-top-bar">
-            <span> PC Builder - Build Your Perfect Computer</span>
+
+<!-- ══════════════════════════════════════════
+     HEADER / NAV
+════════════════════════════════════════════ -->
+<header id="header">
+  <nav class="nav-inner">
+
+    <!-- Logo + Brand -->
+    <a href="index.html" class="nav-logo">
+      <img src="logo.jpg" alt="PC Building Boys logo">
+      <div class="brand-text">
+        PC Building Boys
+        <span>Custom PC Specialists</span>
+      </div>
+    </a>
+
+    <!-- Desktop nav links -->
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li class="dropdown">
+        <a href="#">PC Types <i class="fa-solid fa-chevron-down chev"></i></a>
+        <div class="dropdown-panel">
+          <a href="Professional_Use_Computer.html"><i class="fa-solid fa-briefcase"></i> Professional Use</a>
+          <a href="Home_Computer.html"><i class="fa-solid fa-house"></i> Home Computer</a>
+          <a href="School_Computer.html"><i class="fa-solid fa-graduation-cap"></i> School Computer</a>
+          <a href="Mid-Tier_Gaming_Computer.html"><i class="fa-solid fa-gamepad"></i> Mid-Tier Gaming</a>
+          <a href="Architecture Rendering_Computer.html"><i class="fa-solid fa-drafting-compass"></i> Architecture Rendering</a>
+        </div>
+      </li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <!-- Right side -->
+    <div class="nav-actions">
+      <a href="#" class="nav-cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count" id="cart-count">0</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+  </nav>
+</header>
+
+<!-- Mobile overlay dimmer -->
+<div class="mobile-overlay" id="mobile-overlay"></div>
+
+<!-- ══════════════════════════════════════════
+     MAIN CONTENT
+════════════════════════════════════════════ -->
+<main class="page-wrap">
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-inner">
+
+      <!-- Left: Text -->
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Belize's #1 Custom PC Builder
         </div>
 
-        <nav class="navigation">
-            <a href="index.html" class="logo">
-                <picture>
-                    <source srcset="logo.jpg" type="image/jpeg">
-                    <img src="logo.jpg" alt="logo">
-                </picture>
-            </a>
+        <h1 class="hero-title">
+          Build Your <span class="hl">Dream PC</span><br>
+          Part by Part
+        </h1>
 
-            <button class="menu-toggle" id="menu-toggle">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+        <p class="hero-desc">
+          We curate the best components for every budget and use case.
+          Pick your build type, choose your parts, and get the rig you deserve.
+        </p>
 
-            <ul class="menu" id="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#" id="dropdown-toggle">PC Types <i class="fa-solid fa-chevron-down"></i></a>
-                        <div class="dropdown-content">
-                            <a href="Professional_Use_Computer.html">Professional Use</a>
-                            <a href="Home_Computer.html">Home Computer</a>
-                            <a href="School_Computer.html">School Computer</a>
-                            <a href="Mid-Tier_Gaming_Computer.html">Mid-Tier Gaming</a>
-                            <a href="Architecture Rendering_Computer.html">Architecture Rendering</a>
-                        </div>
-                    </li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-
-            <div class="right-nav">
-                <a href="#" class="nav-cart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span>0</span>
-                </a>
-            </div>
-        </nav>
-    </header>
-
-    <div class="menu-overlay" id="menu-overlay"></div>
-
-<section class="text-center py-5">
-    <div class="container">
-        <h2>Welcome to PC Builder</h2>
-        <p>Build your perfect computer with our curated PC configurations for every need.</p>
-    </div>
-</section>
-
-<section class="py-5 bg-light ">
-    <div class="container">
-        <h2 class="text-center mb-4">Featured PC Builds</h2>
-        <div class="slider-container d-flex justify-content-center align-items-center">
-            <div class="slider heart-shape">
-                <div class="product">
-                    <picture>
-                        <source srcset="logo.jpg" type="image/jpeg">
-                        <img src="logo.jpg" alt="Professional PC" class="img-fluid">
-                    </picture>
-                    <h3>Professional Workstation</h3>
-                    <p>Price: $1,299.00</p>
-                </div>
-                <div class="product">
-                    <picture>
-                        <source srcset="logo.jpg" type="image/jpeg">
-                        <img src="logo.jpg" alt="Gaming PC" class="img-fluid">
-                    </picture>
-                    <h3>Gaming Beast</h3>
-                    <p>Price: $1,799.00</p>
-                </div>
-                <div class="product">
-                    <picture>
-                        <source srcset="logo.jpg" type="image/jpeg">
-                        <img src="logo.jpg" alt="Home PC" class="img-fluid">
-                    </picture>
-                    <h3>Home Office Setup</h3>
-                    <p>Price: $599.00</p>
-                </div>
-            </div>
+        <div class="hero-actions">
+          <a href="Mid-Tier_Gaming_Computer.html" class="btn-primary">
+            <i class="fa-solid fa-rocket"></i> Start Building
+          </a>
+          <a href="about.html" class="btn-outline">
+            <i class="fa-solid fa-users"></i> Meet the Team
+          </a>
         </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-num">5+</div>
+            <div class="stat-label">Build Types</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">50+</div>
+            <div class="stat-label">Components</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Custom</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: PC type quick-links -->
+      <div class="hero-visual">
+        <a href="Professional_Use_Computer.html" class="hero-pc-card">
+          <div class="pc-icon">💼</div>
+          <div class="pc-info">
+            <div class="pc-name">Professional Workstation</div>
+            <div class="pc-price">From $1,299</div>
+          </div>
+          <i class="fa-solid fa-arrow-right pc-arrow"></i>
+        </a>
+        <a href="Mid-Tier_Gaming_Computer.html" class="hero-pc-card">
+          <div class="pc-icon">🎮</div>
+          <div class="pc-info">
+            <div class="pc-name">Mid-Tier Gaming Beast</div>
+            <div class="pc-price">From $1,000</div>
+          </div>
+          <i class="fa-solid fa-arrow-right pc-arrow"></i>
+        </a>
+        <a href="Home_Computer.html" class="hero-pc-card">
+          <div class="pc-icon">🏠</div>
+          <div class="pc-info">
+            <div class="pc-name">Home Office Setup</div>
+            <div class="pc-price">From $599</div>
+          </div>
+          <i class="fa-solid fa-arrow-right pc-arrow"></i>
+        </a>
+        <a href="School_Computer.html" class="hero-pc-card">
+          <div class="pc-icon">🎓</div>
+          <div class="pc-info">
+            <div class="pc-name">School / Student PC</div>
+            <div class="pc-price">From $499</div>
+          </div>
+          <i class="fa-solid fa-arrow-right pc-arrow"></i>
+        </a>
+        <a href="Architecture Rendering_Computer.html" class="hero-pc-card">
+          <div class="pc-icon">🏗️</div>
+          <div class="pc-info">
+            <div class="pc-name">Architecture Render Rig</div>
+            <div class="pc-price">From $1,799</div>
+          </div>
+          <i class="fa-solid fa-arrow-right pc-arrow"></i>
+        </a>
+      </div>
+
     </div>
-</section>
+  </section>
 
-  
+  <hr class="divider">
 
-    <footer class="text-center py-3 mt-4">
-        <p>&copy; 2026 IT BOAIS WEB DEVELOPMENT</p>
-    </footer>
+  <!-- ── FEATURED BUILDS ── -->
+  <section>
+    <div class="section-wrap">
+      <div class="reveal">
+        <span class="section-tag">Our Builds</span>
+        <h2 class="section-title">Featured <span>PC Configurations</span></h2>
+        <p class="section-sub">Every build is hand-selected for the best performance-per-dollar in its category.</p>
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="index.js"></script>
-    <script src="scroll.js"></script>
-        
+      <div class="builds-grid reveal-stagger">
 
-    <script>
-        let currentIndex = 0;
+        <!-- Gaming -->
+        <a href="Mid-Tier_Gaming_Computer.html" class="build-card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1587202372616-b43abea06c2a?w=600&q=80" alt="Gaming PC">
+            <span class="card-badge">Gaming</span>
+          </div>
+          <div class="card-body">
+            <div class="card-label">Most Popular</div>
+            <div class="card-name">Mid-Tier Gaming Beast</div>
+            <div class="card-desc">RTX 3060 + Ryzen 5. Crushes 1080p and handles 1440p like a champ.</div>
+            <div class="card-footer-row">
+              <span class="card-price">~$1,000</span>
+              <span class="card-cta">Build it <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </a>
 
-        function showSlide(index) {
-            const slider = document.querySelector('.slider' );
-            const totalSlides = document.querySelectorAll('.product').length;
-            if (index >= totalSlides) currentIndex = 0;
-            else if (index < 0) currentIndex = totalSlides - 1;
-            else currentIndex = index;
-            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
+        <!-- Professional -->
+        <a href="Professional_Use_Computer.html" class="build-card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600&q=80" alt="Professional PC">
+            <span class="card-badge">Pro</span>
+          </div>
+          <div class="card-body">
+            <div class="card-label">Power User</div>
+            <div class="card-name">Professional Workstation</div>
+            <div class="card-desc">Multi-core muscle for video editing, 3D work, and heavy multitasking.</div>
+            <div class="card-footer-row">
+              <span class="card-price">~$1,299</span>
+              <span class="card-cta">Build it <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </a>
 
-        function nextSlide() { showSlide(currentIndex + 1); }
-        function prevSlide() { showSlide(currentIndex - 1); }
+        <!-- Home -->
+        <a href="Home_Computer.html" class="build-card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600&q=80" alt="Home PC">
+            <span class="card-badge">Home</span>
+          </div>
+          <div class="card-body">
+            <div class="card-label">Budget Friendly</div>
+            <div class="card-name">Home Office Setup</div>
+            <div class="card-desc">Browsing, streaming, docs and light gaming — everything you need at home.</div>
+            <div class="card-footer-row">
+              <span class="card-price">~$599</span>
+              <span class="card-cta">Build it <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </a>
 
-        function autoSlide() {
-            nextSlide();
-            setTimeout(autoSlide, 3000);
-        }
+        <!-- School -->
+        <a href="School_Computer.html" class="build-card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="School PC">
+            <span class="card-badge">Student</span>
+          </div>
+          <div class="card-body">
+            <div class="card-label">Student Ready</div>
+            <div class="card-name">School Computer</div>
+            <div class="card-desc">Lightweight, fast, and reliable for assignments, research, and presentations.</div>
+            <div class="card-footer-row">
+              <span class="card-price">~$499</span>
+              <span class="card-cta">Build it <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </a>
 
-        document.addEventListener("DOMContentLoaded", () => {
-            setTimeout(autoSlide, 3000);
-        });
-    </script>
-   
-      
-      
+        <!-- Architecture -->
+        <a href="Architecture Rendering_Computer.html" class="build-card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1562976540-1502c2145a5a?w=600&q=80" alt="Architecture PC">
+            <span class="card-badge">Render</span>
+          </div>
+          <div class="card-body">
+            <div class="card-label">Heavy Lifting</div>
+            <div class="card-name">Architecture Render Rig</div>
+            <div class="card-desc">Built for CAD, BIM, Lumion & V-Ray. No rendering lag. No excuses.</div>
+            <div class="card-footer-row">
+              <span class="card-price">~$1,799</span>
+              <span class="card-cta">Build it <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── WHY US ── -->
+  <section>
+    <div class="section-wrap">
+      <div class="reveal">
+        <span class="section-tag">Why Choose Us</span>
+        <h2 class="section-title">Built for <span>Real Builders</span></h2>
+        <p class="section-sub">We know components. We know budgets. And we know what actually works.</p>
+      </div>
+
+      <div class="why-grid reveal-stagger">
+        <div class="why-card">
+          <div class="why-icon">⚡</div>
+          <h4>Curated Parts</h4>
+          <p>Every part is hand-picked for best performance per dollar. No filler, no fluff.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🎯</div>
+          <h4>Budget Tracker</h4>
+          <p>Real-time budget tracking as you pick components so you never go over.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🛠️</div>
+          <h4>Expert Builds</h4>
+          <p>Each configuration is built by people who actually build and use PCs daily.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">📱</div>
+          <h4>Works Everywhere</h4>
+          <p>Browse and build from any device. Fully responsive on phone, tablet, and PC.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">PC Building Boys</div>
+      <p class="footer-desc">Your trusted guide to building the perfect custom PC, no matter your budget or use case.</p>
+    </div>
+    <div class="footer-col">
+      <h5>PC Types</h5>
+      <ul>
+        <li><a href="Professional_Use_Computer.html">Professional</a></li>
+        <li><a href="Home_Computer.html">Home</a></li>
+        <li><a href="School_Computer.html">School</a></li>
+        <li><a href="Mid-Tier_Gaming_Computer.html">Gaming</a></li>
+        <li><a href="Architecture Rendering_Computer.html">Architecture</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 PC Building Boys — IT BOAIS Web Development</span>
+    <span>Made with <span class="footer-heart">♥</span> in Belize</span>
+  </div>
+</footer>
+
+<!-- Toast notification -->
+<div class="toast" id="toast">
+  <span class="toast-icon"><i class="fa-solid fa-circle-check"></i></span>
+  <span class="toast-msg"></span>
+</div>
+
+<script src="index.js"></script>
 </body>
 </html>

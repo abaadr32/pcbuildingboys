@@ -1,120 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PC Builder | About</title>
-    <link rel="icon" href="logo.jpg" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC Building Boys — About Us</title>
+  <link rel="icon" href="logo.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-    <div class="main-content">
-    <header id="header">
-        <div class="header-top-bar">
-            <span>PC Builder - Build Your Perfect Computer</span>
+
+<header id="header">
+  <nav class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.jpg" alt="PC Building Boys logo">
+      <div class="brand-text">PC Building Boys<span>Custom PC Specialists</span></div>
+    </a>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">PC Types <i class="fa-solid fa-chevron-down chev"></i></a>
+        <div class="dropdown-panel">
+          <a href="Professional_Use_Computer.html"><i class="fa-solid fa-briefcase"></i> Professional Use</a>
+          <a href="Home_Computer.html"><i class="fa-solid fa-house"></i> Home Computer</a>
+          <a href="School_Computer.html"><i class="fa-solid fa-graduation-cap"></i> School Computer</a>
+          <a href="Mid-Tier_Gaming_Computer.html"><i class="fa-solid fa-gamepad"></i> Mid-Tier Gaming</a>
+          <a href="Architecture Rendering_Computer.html"><i class="fa-solid fa-drafting-compass"></i> Architecture Rendering</a>
         </div>
-
-        <nav class="navigation">
-            <a href="index.html" class="logo">
-                <picture>
-                    <source srcset="logo.jpg" type="image/jpeg">
-                    <img src="logo.jpg" alt="logo">
-                </picture>
-            </a>
-
-            <button class="menu-toggle" id="menu-toggle">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
-            <ul class="menu" id="menu" >
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="#" id="dropdown-toggle">PC Types <i class="fa-solid fa-chevron-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="Professional_Use_Computer.html">Professional Use</a>
-                        <a href="Home_Computer.html">Home Computer</a>
-                        <a href="School_Computer.html">School Computer</a>
-                        <a href="Mid-Tier_Gaming_Computer.html">Mid-Tier Gaming</a>
-                        <a href="Architecture Rendering_Computer.html">Architecture Rendering</a>
-                    </div>
-                </li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-
-            <div class="right-nav">
-                <a href="#" class="nav-cart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span>0</span>
-                </a>
-            </div>
-        </nav>
-    </header>
-
-    <div class="menu-overlay" id="menu-overlay"></div>
-
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-4 offset-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="text-center">About Us</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#" class="nav-cart-btn"><i class="fa-solid fa-cart-shopping"></i><span class="cart-count" id="cart-count">0</span></a>
+      <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
     </div>
+  </nav>
+</header>
+<div class="mobile-overlay" id="mobile-overlay"></div>
 
-    <div class="container py-5">
-        <div class="row justify-content-center text-center">
-          <div class="col-md-10">
-            <h1 class="display-4 fw-bold mb-4" style="color: #6f42c1;">Welcome to Clarita's Gift Shop!</h1>
-            <p class="lead fs-5">
-              You like <strong>sandals</strong>? We have them! You love <strong>jewelry</strong>? We also have them!!!
-              Looking for <strong>pretty bags</strong>? We’ve got you covered!
-            </p>
-            <p class="mt-4 fs-5">
-              Here at Clarita's Gift Shop, we offer the <strong>best quality products</strong> in the country! We've been proudly serving our amazing customers since <strong>2017</strong> and across the years we’ve been growing slowly but surely.
-            </p>
-            <p class="fs-5">
-              Whether you’re shopping retail or wholesale, we’re here for you. And the best part? <strong>We ship COUNTRYWIDE</strong> — so your favorite items can arrive right at your doorstep!
-            </p>
-            <h2 class="mt-5 text-success fw-bold">CLARITA'S GIFT SHOP — WE HAVE WHAT YOU NEED!</h2>
+<main class="page-wrap">
+
+  <!-- Page hero banner -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>About Us</span>
+      </div>
+      <h1 class="page-hero-title">About <span>PC Building Boys</span></h1>
+      <p class="page-hero-sub">We're a team of passionate builders who live and breathe custom PCs.</p>
+    </div>
+  </div>
+
+  <!-- Main about content -->
+  <section>
+    <div class="section-wrap">
+      <div class="about-grid reveal">
+
+        <!-- Visual side -->
+        <div class="about-visual">
+          <img
+            class="about-pc-img"
+            src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=700&q=80"
+            alt="PC Building Boys at work"
+          >
+          <div class="about-badge">
+            <span class="ab-num">5+</span>
+            <span class="ab-txt">Build<br>Categories</span>
           </div>
         </div>
+
+        <!-- Text side -->
+        <div class="about-content">
+          <span class="section-tag">Our Story</span>
+          <h2 class="section-title">We Build PCs.<br><span>For Every Person.</span></h2>
+
+          <p class="about-para">
+            <strong>PC Building Boys</strong> was born out of frustration — watching people overpay
+            for prebuilt machines that underperform. We believe everyone deserves a custom build
+            that fits their exact needs and budget.
+          </p>
+          <p class="about-para">
+            From students needing a reliable machine for schoolwork, to professionals demanding
+            workstation-level power, to gamers chasing max frames — we've got a build for everyone.
+          </p>
+          <p class="about-para">
+            Our team researches every component, checks compatibility, tracks price-to-performance,
+            and puts together builds that <strong>actually make sense</strong>. No filler parts,
+            no overpriced bundles. Just solid, honest PC building advice.
+          </p>
+
+          <a href="Mid-Tier_Gaming_Computer.html" class="btn-primary" style="margin-top:8px">
+            <i class="fa-solid fa-rocket"></i> Start Your Build
+          </a>
+        </div>
       </div>
-      
+    </div>
+  </section>
 
+  <hr class="divider">
 
+  <!-- Team section -->
+  <section>
+    <div class="section-wrap">
+      <div class="reveal">
+        <span class="section-tag">The Team</span>
+        <h2 class="section-title">Meet the <span>Boys</span></h2>
+        <p class="section-sub">The crew behind every build recommendation.</p>
+      </div>
 
+      <div class="team-grid reveal-stagger">
+        <div class="team-card">
+          <div class="team-avatar">👨‍💻</div>
+          <div class="team-name">Team Lead</div>
+          <div class="team-role">Build Architect</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">⚙️</div>
+          <div class="team-name">Component Expert</div>
+          <div class="team-role">Parts Specialist</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">🎮</div>
+          <div class="team-name">Gaming Guru</div>
+          <div class="team-role">Gaming Builds</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">🌐</div>
+          <div class="team-name">Web Dev</div>
+          <div class="team-role">IT BOAIS Dev</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+</main>
 
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">PC Building Boys</div>
+      <p class="footer-desc">Your trusted guide to building the perfect custom PC, no matter your budget or use case.</p>
+    </div>
+    <div class="footer-col">
+      <h5>PC Types</h5>
+      <ul>
+        <li><a href="Professional_Use_Computer.html">Professional</a></li>
+        <li><a href="Home_Computer.html">Home</a></li>
+        <li><a href="School_Computer.html">School</a></li>
+        <li><a href="Mid-Tier_Gaming_Computer.html">Gaming</a></li>
+        <li><a href="Architecture Rendering_Computer.html">Architecture</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 PC Building Boys — IT BOAIS Web Development</span>
+    <span>Made with <span class="footer-heart">♥</span> in Belize</span>
+  </div>
+</footer>
 
-
-
+<div class="toast" id="toast">
+  <span class="toast-icon"><i class="fa-solid fa-circle-check"></i></span>
+  <span class="toast-msg"></span>
 </div>
-      
 
-</div>
-
-
-
-    <footer class="text-center py-3 mt-4">
-        <p>&copy; 2026 IT BOAIS WEB DEVELOPMENT</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="index.js"></script>
-    <script src="scroll.js"></script>
-        
-    
-   
+<script src="index.js"></script>
 </body>
 </html>
