@@ -6,38 +6,52 @@
   <title>PC Building Boys — Contact</title>
   <link rel="icon" href="logo.jpg" type="image/jpeg">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 </head>
 <body>
 
 <header id="header">
   <nav class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <img src="logo.jpg" alt="PC Building Boys logo">
+      <img src="logo.jpg" alt="PC Building Boys">
       <div class="brand-text">PC Building Boys<span>Custom PC Specialists</span></div>
     </a>
     <ul class="nav-menu" id="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li class="dropdown">
-        <a href="#">PC Types <i class="fa-solid fa-chevron-down chev"></i></a>
+        <a href="#">PC Types <i class="bi bi-chevron-down chev"></i></a>
         <div class="dropdown-panel">
-          <a href="Professional_Use_Computer.html"><i class="fa-solid fa-briefcase"></i> Professional Use</a>
-          <a href="Home_Computer.html"><i class="fa-solid fa-house"></i> Home Computer</a>
-          <a href="School_Computer.html"><i class="fa-solid fa-graduation-cap"></i> School Computer</a>
-          <a href="Mid-Tier_Gaming_Computer.html"><i class="fa-solid fa-gamepad"></i> Mid-Tier Gaming</a>
-          <a href="Architecture Rendering_Computer.html"><i class="fa-solid fa-drafting-compass"></i> Architecture Rendering</a>
+          <a href="Professional_Use_Computer.html"><i class="bi bi-briefcase"></i> Professional Use</a>
+          <a href="Home_Computer.html"><i class="bi bi-house"></i> Home Computer</a>
+          <a href="School_Computer.html"><i class="bi bi-mortarboard"></i> School Computer</a>
+          <a href="Mid-Tier_Gaming_Computer.html"><i class="bi bi-controller"></i> Mid-Tier Gaming</a>
+          <a href="Architecture Rendering_Computer.html"><i class="bi bi-vector-pen"></i> Architecture Rendering</a>
         </div>
       </li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
-    <div class="nav-actions">
-      <a href="#" class="nav-cart-btn"><i class="fa-solid fa-cart-shopping"></i><span class="cart-count" id="cart-count">0</span></a>
-      <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+    <div class="nav-right">
+      <a href="#" class="nav-btn-icon"><i class="bi bi-bag"></i><span class="cart-badge" id="cart-count">0</span></a>
+      <button class="menu-toggle" id="menu-toggle"><i class="bi bi-list"></i></button>
     </div>
   </nav>
 </header>
+
 <div class="mobile-overlay" id="mobile-overlay"></div>
+<nav class="mobile-menu" id="mobile-menu">
+  <a href="index.html"><i class="bi bi-house-door"></i> Home</a>
+  <div class="mobile-divider"></div>
+  <a href="Professional_Use_Computer.html"><i class="bi bi-briefcase"></i> Professional Use</a>
+  <a href="Home_Computer.html"><i class="bi bi-house"></i> Home Computer</a>
+  <a href="School_Computer.html"><i class="bi bi-mortarboard"></i> School Computer</a>
+  <a href="Mid-Tier_Gaming_Computer.html"><i class="bi bi-controller"></i> Mid-Tier Gaming</a>
+  <a href="Architecture Rendering_Computer.html"><i class="bi bi-vector-pen"></i> Architecture Rendering</a>
+  <div class="mobile-divider"></div>
+  <a href="about.html"><i class="bi bi-people"></i> About Us</a>
+  <a href="contact.html" class="active"><i class="bi bi-chat-square-dots"></i> Contact</a>
+</nav>
 
 <main class="page-wrap">
 
@@ -45,7 +59,7 @@
     <div class="page-hero-inner">
       <div class="breadcrumb">
         <a href="index.html">Home</a>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi bi-chevron-right"></i>
         <span>Contact</span>
       </div>
       <h1 class="page-hero-title">Get in <span>Touch</span></h1>
@@ -53,35 +67,35 @@
     </div>
   </div>
 
-  <section>
-    <div class="section-wrap">
+  <section class="section">
+    <div class="section-inner">
       <div class="contact-grid reveal">
 
         <!-- Left: info -->
         <div class="contact-info">
-          <span class="section-tag">Reach Us</span>
+          <span class="section-label">Reach Us</span>
           <h2 class="section-title">We're on <span>Social Media</span></h2>
           <p class="section-sub" style="margin-bottom:32px">
             Follow us for build tips, component drops, and behind-the-scenes content.
             DM us any time with your questions — we respond fast.
           </p>
 
-          <div class="info-item">
-            <div class="info-icon"><i class="fa-solid fa-location-dot" style="color:var(--accent-cyan)"></i></div>
+          <div class="info-row">
+            <div class="info-icon-wrap"><i class="bi bi-geo-alt-fill"></i></div>
             <div>
               <h4>Location</h4>
               <p>Belize City, Belize</p>
             </div>
           </div>
-          <div class="info-item">
-            <div class="info-icon"><i class="fa-solid fa-clock" style="color:var(--accent-cyan)"></i></div>
+          <div class="info-row">
+            <div class="info-icon-wrap"><i class="bi bi-clock-fill"></i></div>
             <div>
               <h4>Response Time</h4>
               <p>Usually within 24 hours</p>
             </div>
           </div>
-          <div class="info-item">
-            <div class="info-icon"><i class="fa-solid fa-comment-dots" style="color:var(--accent-cyan)"></i></div>
+          <div class="info-row">
+            <div class="info-icon-wrap"><i class="bi bi-chat-dots-fill"></i></div>
             <div>
               <h4>Best Way to Reach Us</h4>
               <p>Slide into our DMs on any platform below</p>
@@ -89,40 +103,37 @@
           </div>
         </div>
 
-        <!-- Right: social links -->
+        <!-- Right: social -->
         <div>
-          <span class="section-tag">Find Us Here</span>
-          <h3 class="section-title" style="font-size:1.4rem; margin-bottom:24px">Our <span>Socials</span></h3>
+          <span class="section-label">Find Us Here</span>
+          <h3 class="section-title" style="font-size:1.5rem;margin-bottom:24px">Our <span>Socials</span></h3>
 
-          <div class="social-links">
-            <!-- TikTok -->
-            <a href="https://www.tiktok.com/@pcbuildingboys" target="_blank" class="social-link tiktok">
-              <div class="s-icon"><i class="fa-brands fa-tiktok"></i></div>
-              <div>
-                <div class="s-name">TikTok</div>
-                <div class="s-handle">@pcbuildingboys</div>
+          <div class="social-list">
+            <a href="https://www.tiktok.com/@pcbuildingboys" target="_blank" rel="noopener" class="social-item">
+              <div class="social-icon tiktok"><i class="bi bi-tiktok"></i></div>
+              <div class="social-text">
+                <div class="social-name">TikTok</div>
+                <div class="social-handle">@pcbuildingboys</div>
               </div>
-              <i class="fa-solid fa-arrow-right s-arrow"></i>
+              <i class="bi bi-arrow-right social-arrow"></i>
             </a>
 
-            <!-- Facebook -->
-            <a href="https://www.facebook.com/share/14vjnNHWLUg/" target="_blank" class="social-link facebook">
-              <div class="s-icon"><i class="fa-brands fa-facebook"></i></div>
-              <div>
-                <div class="s-name">Facebook</div>
-                <div class="s-handle">PC Building Boys</div>
+            <a href="https://www.facebook.com/share/14vjnNHWLUg/" target="_blank" rel="noopener" class="social-item">
+              <div class="social-icon facebook"><i class="bi bi-facebook"></i></div>
+              <div class="social-text">
+                <div class="social-name">Facebook</div>
+                <div class="social-handle">PC Building Boys</div>
               </div>
-              <i class="fa-solid fa-arrow-right s-arrow"></i>
+              <i class="bi bi-arrow-right social-arrow"></i>
             </a>
 
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/pcbuildingboys/" target="_blank" class="social-link instagram">
-              <div class="s-icon"><i class="fa-brands fa-instagram"></i></div>
-              <div>
-                <div class="s-name">Instagram</div>
-                <div class="s-handle">@pcbuildingboys</div>
+            <a href="https://www.instagram.com/pcbuildingboys/" target="_blank" rel="noopener" class="social-item">
+              <div class="social-icon instagram"><i class="bi bi-instagram"></i></div>
+              <div class="social-text">
+                <div class="social-name">Instagram</div>
+                <div class="social-handle">@pcbuildingboys</div>
               </div>
-              <i class="fa-solid fa-arrow-right s-arrow"></i>
+              <i class="bi bi-arrow-right social-arrow"></i>
             </a>
           </div>
         </div>
@@ -136,7 +147,7 @@
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-brand-name">PC Building Boys</div>
+      <div class="footer-brand"><img src="logo.jpg" alt="PC Building Boys"><span class="footer-brand-name">PC Building Boys</span></div>
       <p class="footer-desc">Your trusted guide to building the perfect custom PC, no matter your budget or use case.</p>
     </div>
     <div class="footer-col">
@@ -163,10 +174,7 @@
   </div>
 </footer>
 
-<div class="toast" id="toast">
-  <span class="toast-icon"><i class="fa-solid fa-circle-check"></i></span>
-  <span class="toast-msg"></span>
-</div>
+<div class="toast" id="toast"><i class="bi bi-check-circle-fill"></i><span class="toast-msg"></span></div>
 <script src="index.js"></script>
 </body>
 </html>

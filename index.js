@@ -1,117 +1,87 @@
-/* ============================================================
-   PC BUILDING BOYS — SHARED JAVASCRIPT (index.js)
-   Handles: nav toggle, mobile dropdown, scroll-hide header,
-            scroll-reveal animations, cart count, toast util
-   ============================================================ */
+/* PC Building Boys — Main JS */
 
-// ── Wait for DOM to be ready ──────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
+// ── Nav scroll + hide ──────────────────────────────────────────
+const header = document.getElementById('header');
+let lastScroll = 0;
 
-  /* ── 1. ELEMENTS ─────────────────────────────────────────── */
-  const header       = document.getElementById('header');
-  const menuToggle   = document.getElementById('menu-toggle');
-  const navMenu      = document.getElementById('nav-menu');
-  const overlay      = document.getElementById('mobile-overlay');
-  const dropdowns    = document.querySelectorAll('.dropdown');
-  const cartCount    = document.getElementById('cart-count');
-
-  /* ── 2. MOBILE MENU TOGGLE ───────────────────────────────── */
-  if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', () => {
-      const open = navMenu.classList.toggle('open');
-      overlay && overlay.classList.toggle('active', open);
-      // Animate icon between bars ↔ X
-      menuToggle.innerHTML = open
-        ? '<i class="fa-solid fa-xmark"></i>'
-        : '<i class="fa-solid fa-bars"></i>';
-    });
+window.addEventListener('scroll', () => {
+  const cur = window.scrollY;
+  if (cur > 80) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
   }
-
-  /* ── 3. CLOSE MENU ON OVERLAY CLICK ─────────────────────── */
-  if (overlay) {
-    overlay.addEventListener('click', closeMenu);
+  if (cur > lastScroll + 60 && cur > 300) {
+    header.classList.add('hidden');
+  } else if (cur < lastScroll - 10) {
+    header.classList.remove('hidden');
   }
+  lastScroll = cur;
+}, { passive: true });
 
-  function closeMenu() {
-    navMenu && navMenu.classList.remove('open');
-    overlay && overlay.classList.remove('active');
-    if (menuToggle) menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+// ── Mobile menu ────────────────────────────────────────────────
+const menuToggle  = document.getElementById('menu-toggle');
+const mobileMenu  = document.getElementById('mobile-menu');
+const mobileOvly  = document.getElementById('mobile-overlay');
+
+function toggleMobileMenu(open) {
+  const isOpen = open ?? !mobileMenu.classList.contains('open');
+  mobileMenu?.classList.toggle('open', isOpen);
+  mobileOvly?.classList.toggle('open', isOpen);
+  if (menuToggle) {
+    menuToggle.querySelector('i').className = isOpen ? 'bi bi-x-lg' : 'bi bi-list';
   }
+}
 
-  /* ── 4. MOBILE DROPDOWN TOGGLE (tap chevron row) ─────────── */
-  dropdowns.forEach(dd => {
-    const toggle = dd.querySelector('a'); // the row that has the chevron
-    if (!toggle) return;
-    toggle.addEventListener('click', e => {
-      // Only hijack click on mobile (when menu-toggle is visible)
-      if (window.innerWidth > 768) return;
+menuToggle?.addEventListener('click', () => toggleMobileMenu());
+mobileOvly?.addEventListener('click', () => toggleMobileMenu(false));
+document.querySelectorAll('.mobile-menu a').forEach(a =>
+  a.addEventListener('click', () => toggleMobileMenu(false))
+);
+
+// ── Dropdown keyboard/touch on mobile ─────────────────────────
+document.querySelectorAll('.dropdown > a').forEach(a => {
+  a.addEventListener('click', e => {
+    if (window.innerWidth <= 768) {
       e.preventDefault();
-      dd.classList.toggle('active');
-    });
-  });
-
-  /* ── 5. CLOSE MOBILE MENU ON NAV LINK CLICK ─────────────── */
-  document.querySelectorAll('#nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 768) closeMenu();
-    });
-  });
-
-  /* ── 6. SCROLL-HIDE HEADER ───────────────────────────────── */
-  let lastY = 0;
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    if (header) {
-      // Hide header only after scrolling down 80px
-      header.classList.toggle('header-hidden', y > lastY && y > 80);
+      a.closest('.dropdown').classList.toggle('open');
     }
-    lastY = y;
-  }, { passive: true });
-
-  /* ── 7. SCROLL-REVEAL (IntersectionObserver) ─────────────── */
-  const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
-  if (revealEls.length) {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // fire once
-        }
-      });
-    }, { threshold: 0.12 });
-    revealEls.forEach(el => observer.observe(el));
-  }
-
-  /* ── 8. CART COUNT (reads from sessionStorage) ───────────── */
-  function updateCartDisplay() {
-    if (!cartCount) return;
-    const count = Object.keys(getCart()).length;
-    cartCount.textContent = count;
-    cartCount.style.display = count > 0 ? 'flex' : 'flex';
-  }
-
-  // Expose cart helpers globally so component pages can call them
-  window.getCart = function() {
-    try { return JSON.parse(sessionStorage.getItem('pbb_cart') || '{}'); }
-    catch(e) { return {}; }
-  };
-  window.setCart = function(cart) {
-    sessionStorage.setItem('pbb_cart', JSON.stringify(cart));
-    updateCartDisplay();
-  };
-
-  updateCartDisplay();
-
-  /* ── 9. TOAST UTILITY ────────────────────────────────────── */
-  // Usage: window.showToast('✓ Component selected!', 2500)
-  const toast = document.getElementById('toast');
-  let toastTimer;
-  window.showToast = function(msg, duration = 2400) {
-    if (!toast) return;
-    toast.querySelector('.toast-msg').textContent = msg;
-    toast.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove('show'), duration);
-  };
-
+  });
 });
+
+// ── Scroll reveal ──────────────────────────────────────────────
+const revealEls = document.querySelectorAll('.reveal, .stagger');
+
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+revealEls.forEach(el => io.observe(el));
+
+// ── Toast ──────────────────────────────────────────────────────
+let toastTimer;
+window.showToast = function(msg) {
+  const t = document.getElementById('toast');
+  if (!t) return;
+  t.querySelector('.toast-msg').textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 3000);
+};
+
+// ── Cart count (from localStorage) ────────────────────────────
+function updateCartUI() {
+  try {
+    const count = parseInt(localStorage.getItem('pcbb_cart_count') || '0', 10);
+    document.querySelectorAll('#cart-count').forEach(el => {
+      el.textContent = count;
+      el.style.display = count === 0 ? 'none' : '';
+    });
+  } catch(e) {}
+}
+updateCartUI();

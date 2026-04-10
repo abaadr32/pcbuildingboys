@@ -3,120 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PC Building Boys — Professional Workstation</title>
+  <title>PC Building Boys — Professional Use Computer</title>
   <link rel="icon" href="logo.jpg" type="image/jpeg">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <!-- Hidden element tells builder.js which JSON to load -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
   <span id="pc-data-src" data-src="professional.json" style="display:none"></span>
 </head>
 <body>
-
 <header id="header">
   <nav class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <img src="logo.jpg" alt="PC Building Boys logo">
+      <img src="logo.jpg" alt="PC Building Boys">
       <div class="brand-text">PC Building Boys<span>Custom PC Specialists</span></div>
     </a>
     <ul class="nav-menu" id="nav-menu">
       <li><a href="index.html">Home</a></li>
-      <li class="dropdown active">
-        <a href="#">PC Types <i class="fa-solid fa-chevron-down chev"></i></a>
+      <li class="dropdown">
+        <a href="#">PC Types <i class="bi bi-chevron-down chev"></i></a>
         <div class="dropdown-panel">
-          <a href="Professional_Use_Computer.html"><i class="fa-solid fa-briefcase"></i> Professional Use</a>
-          <a href="Home_Computer.html"><i class="fa-solid fa-house"></i> Home Computer</a>
-          <a href="School_Computer.html"><i class="fa-solid fa-graduation-cap"></i> School Computer</a>
-          <a href="Mid-Tier_Gaming_Computer.html"><i class="fa-solid fa-gamepad"></i> Mid-Tier Gaming</a>
-          <a href="Architecture Rendering_Computer.html"><i class="fa-solid fa-drafting-compass"></i> Architecture Rendering</a>
+          <a href="Professional_Use_Computer.html"><i class="bi bi-briefcase"></i> Professional Use</a>
+          <a href="Home_Computer.html"><i class="bi bi-house"></i> Home Computer</a>
+          <a href="School_Computer.html"><i class="bi bi-mortarboard"></i> School Computer</a>
+          <a href="Mid-Tier_Gaming_Computer.html"><i class="bi bi-controller"></i> Mid-Tier Gaming</a>
+          <a href="Architecture Rendering_Computer.html"><i class="bi bi-vector-pen"></i> Architecture Rendering</a>
         </div>
       </li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="nav-actions">
-      <a href="#" class="nav-cart-btn"><i class="fa-solid fa-cart-shopping"></i><span class="cart-count" id="cart-count">0</span></a>
-      <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+    <div class="nav-right">
+      <a href="#" class="nav-btn-icon"><i class="bi bi-bag"></i><span class="cart-badge" id="cart-count">0</span></a>
+      <button class="menu-toggle" id="menu-toggle"><i class="bi bi-list"></i></button>
     </div>
   </nav>
 </header>
 <div class="mobile-overlay" id="mobile-overlay"></div>
-
+<nav class="mobile-menu" id="mobile-menu">
+  <a href="index.html"><i class="bi bi-house-door"></i> Home</a>
+  <div class="mobile-divider"></div>
+  <a href="Professional_Use_Computer.html"><i class="bi bi-briefcase"></i> Professional Use</a>
+  <a href="Home_Computer.html"><i class="bi bi-house"></i> Home Computer</a>
+  <a href="School_Computer.html"><i class="bi bi-mortarboard"></i> School Computer</a>
+  <a href="Mid-Tier_Gaming_Computer.html"><i class="bi bi-controller"></i> Mid-Tier Gaming</a>
+  <a href="Architecture Rendering_Computer.html"><i class="bi bi-vector-pen"></i> Architecture Rendering</a>
+  <div class="mobile-divider"></div>
+  <a href="about.html"><i class="bi bi-people"></i> About Us</a>
+  <a href="contact.html"><i class="bi bi-chat-square-dots"></i> Contact</a>
+</nav>
 <main class="page-wrap">
-
-  <!-- Page banner -->
   <div class="page-hero">
     <div class="page-hero-inner">
       <div class="breadcrumb">
         <a href="index.html">Home</a>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi bi-chevron-right"></i>
         <span>PC Types</span>
-        <i class="fa-solid fa-chevron-right"></i>
-        <span>Professional Workstation</span>
+        <i class="bi bi-chevron-right"></i>
+        <span>Professional Use Computer</span>
       </div>
-      <h1 class="page-hero-title">💼 <span>Professional Workstation</span></h1>
-      <p class="page-hero-sub">Muscle for video editing, 3D work and heavy multitasking — Pick your parts below and track your budget in real time.</p>
+      <h1 class="page-hero-title"><i class="bi bi-briefcase-fill" style="color:var(--accent-2);margin-right:10px"></i><span>Professional Use Computer</span></h1>
+      <p class="page-hero-sub">Professional workstation builds for maximum productivity and multi-tasking power.</p>
     </div>
   </div>
-
-  <!-- Sticky budget tracker bar -->
   <div class="budget-bar">
     <div class="budget-bar-inner">
       <div class="budget-stats">
-        <div class="bstat">
-          <div class="bl">Budget</div>
-          <div class="bv total" id="budget-total">—</div>
-        </div>
-        <div class="bstat">
-          <div class="bl">Spent</div>
-          <div class="bv spent" id="budget-spent">$0</div>
-        </div>
-        <div class="bstat">
-          <div class="bl">Remaining</div>
-          <div class="bv remain" id="budget-remain">—</div>
-        </div>
+        <div class="bstat"><div class="bl">Budget</div><div class="bv total" id="budget-total">—</div></div>
+        <div class="bstat"><div class="bl">Spent</div><div class="bv spent" id="budget-spent">$0</div></div>
+        <div class="bstat"><div class="bl">Remaining</div><div class="bv remain" id="budget-remain">—</div></div>
       </div>
-      <div class="budget-prog">
-        <div class="budget-prog-fill" id="budget-bar-fill"></div>
+      <div class="budget-track">
+        <div class="budget-track-bar"><div class="budget-fill" id="budget-bar-fill"></div></div>
+        <div class="budget-pct" id="budget-pct">0% used</div>
       </div>
-      <button class="btn-clear-build" id="clear-build-btn">
-        <i class="fa-solid fa-trash"></i> Clear Build
-      </button>
+      <button class="btn btn-danger btn-sm" id="clear-build-btn" style="margin-left:auto"><i class="bi bi-trash3"></i> Clear Build</button>
     </div>
   </div>
-
-  <!-- Components container — builder.js fills this -->
   <div class="components-wrap">
     <div id="components-container">
-      <!-- Loading state -->
-      <div style="text-align:center;padding:60px 0;color:var(--text-muted)">
-        <i class="fa-solid fa-circle-notch fa-spin" style="font-size:2rem;color:var(--accent-cyan);margin-bottom:12px;display:block"></i>
+      <div style="text-align:center;padding:80px 0;color:var(--text-3)">
+        <i class="bi bi-arrow-repeat" style="font-size:2rem;display:block;margin-bottom:12px;color:var(--accent);animation:spin 1s linear infinite"></i>
         Loading components...
       </div>
     </div>
   </div>
-
 </main>
-
-<!-- Part detail modal -->
 <div class="modal-overlay" id="modal-overlay">
-  <div class="modal-box">
-    <img class="modal-img" id="modal-img" src="" alt="">
-    <div class="modal-content">
+  <div class="modal">
+    <img class="modal-img" id="modal-img" src="" alt="Part">
+    <div class="modal-body">
       <div class="modal-brand" id="modal-brand"></div>
-      <div class="modal-name"  id="modal-name"></div>
+      <div class="modal-name" id="modal-name"></div>
       <div class="modal-price" id="modal-price"></div>
       <div class="modal-actions">
-        <button class="modal-select-btn" id="modal-select-btn">Add to Build</button>
-        <button class="modal-close-btn"  id="modal-close-btn">Cancel</button>
+        <button class="btn btn-primary" id="modal-select-btn"><i class="bi bi-plus-lg"></i> Add to Build</button>
+        <button class="btn btn-secondary" id="modal-close-btn"><i class="bi bi-x-lg"></i> Close</button>
       </div>
     </div>
   </div>
 </div>
-
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-brand-name">PC Building Boys</div>
+      <div class="footer-brand"><img src="logo.jpg" alt="PC Building Boys"><span class="footer-brand-name">PC Building Boys</span></div>
       <p class="footer-desc">Your trusted guide to building the perfect custom PC, no matter your budget or use case.</p>
     </div>
     <div class="footer-col">
@@ -139,15 +128,11 @@
   </div>
   <div class="footer-bottom">
     <span>© 2026 PC Building Boys — IT BOAIS Web Development</span>
-    <span>Made with <span class="footer-heart">♥</span> in Belize</span>
+    <span>Made with <span class="footer-heart">&#9829;</span> in Belize</span>
   </div>
 </footer>
-
-<div class="toast" id="toast">
-  <span class="toast-icon"><i class="fa-solid fa-circle-check"></i></span>
-  <span class="toast-msg"></span>
-</div>
-
+<div class="toast" id="toast"><i class="bi bi-check-circle-fill"></i><span class="toast-msg"></span></div>
+<style>@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }</style>
 <script src="index.js"></script>
 <script src="builder.js"></script>
 </body>

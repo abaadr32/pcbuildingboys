@@ -6,47 +6,60 @@
   <title>PC Building Boys — About Us</title>
   <link rel="icon" href="logo.jpg" type="image/jpeg">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 </head>
 <body>
 
 <header id="header">
   <nav class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <img src="logo.jpg" alt="PC Building Boys logo">
+      <img src="logo.jpg" alt="PC Building Boys">
       <div class="brand-text">PC Building Boys<span>Custom PC Specialists</span></div>
     </a>
     <ul class="nav-menu" id="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li class="dropdown">
-        <a href="#">PC Types <i class="fa-solid fa-chevron-down chev"></i></a>
+        <a href="#">PC Types <i class="bi bi-chevron-down chev"></i></a>
         <div class="dropdown-panel">
-          <a href="Professional_Use_Computer.html"><i class="fa-solid fa-briefcase"></i> Professional Use</a>
-          <a href="Home_Computer.html"><i class="fa-solid fa-house"></i> Home Computer</a>
-          <a href="School_Computer.html"><i class="fa-solid fa-graduation-cap"></i> School Computer</a>
-          <a href="Mid-Tier_Gaming_Computer.html"><i class="fa-solid fa-gamepad"></i> Mid-Tier Gaming</a>
-          <a href="Architecture Rendering_Computer.html"><i class="fa-solid fa-drafting-compass"></i> Architecture Rendering</a>
+          <a href="Professional_Use_Computer.html"><i class="bi bi-briefcase"></i> Professional Use</a>
+          <a href="Home_Computer.html"><i class="bi bi-house"></i> Home Computer</a>
+          <a href="School_Computer.html"><i class="bi bi-mortarboard"></i> School Computer</a>
+          <a href="Mid-Tier_Gaming_Computer.html"><i class="bi bi-controller"></i> Mid-Tier Gaming</a>
+          <a href="Architecture Rendering_Computer.html"><i class="bi bi-vector-pen"></i> Architecture Rendering</a>
         </div>
       </li>
       <li><a href="about.html" class="active">About Us</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="nav-actions">
-      <a href="#" class="nav-cart-btn"><i class="fa-solid fa-cart-shopping"></i><span class="cart-count" id="cart-count">0</span></a>
-      <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+    <div class="nav-right">
+      <a href="#" class="nav-btn-icon"><i class="bi bi-bag"></i><span class="cart-badge" id="cart-count">0</span></a>
+      <button class="menu-toggle" id="menu-toggle"><i class="bi bi-list"></i></button>
     </div>
   </nav>
 </header>
+
 <div class="mobile-overlay" id="mobile-overlay"></div>
+<nav class="mobile-menu" id="mobile-menu">
+  <a href="index.html"><i class="bi bi-house-door"></i> Home</a>
+  <div class="mobile-divider"></div>
+  <a href="Professional_Use_Computer.html"><i class="bi bi-briefcase"></i> Professional Use</a>
+  <a href="Home_Computer.html"><i class="bi bi-house"></i> Home Computer</a>
+  <a href="School_Computer.html"><i class="bi bi-mortarboard"></i> School Computer</a>
+  <a href="Mid-Tier_Gaming_Computer.html"><i class="bi bi-controller"></i> Mid-Tier Gaming</a>
+  <a href="Architecture Rendering_Computer.html"><i class="bi bi-vector-pen"></i> Architecture Rendering</a>
+  <div class="mobile-divider"></div>
+  <a href="about.html" class="active"><i class="bi bi-people"></i> About Us</a>
+  <a href="contact.html"><i class="bi bi-chat-square-dots"></i> Contact</a>
+</nav>
 
 <main class="page-wrap">
 
-  <!-- Page hero banner -->
   <div class="page-hero">
     <div class="page-hero-inner">
       <div class="breadcrumb">
         <a href="index.html">Home</a>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi bi-chevron-right"></i>
         <span>About Us</span>
       </div>
       <h1 class="page-hero-title">About <span>PC Building Boys</span></h1>
@@ -54,28 +67,25 @@
     </div>
   </div>
 
-  <!-- Main about content -->
-  <section>
-    <div class="section-wrap">
+  <!-- About section -->
+  <section class="section">
+    <div class="section-inner">
       <div class="about-grid reveal">
-
-        <!-- Visual side -->
         <div class="about-visual">
-          <img
-            class="about-pc-img"
-            src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=700&q=80"
-            alt="PC Building Boys at work"
-          >
-          <div class="about-badge">
-            <span class="ab-num">5+</span>
-            <span class="ab-txt">Build<br>Categories</span>
+          <img class="about-img" src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=700&q=80" alt="Custom PC build">
+          <div class="about-stat-badge">
+            <div>
+              <div class="asb-num">5+</div>
+              <div class="asb-label">Build Categories</div>
+            </div>
+            <i class="bi bi-cpu-fill" style="font-size:1.8rem;color:var(--accent);opacity:0.6"></i>
           </div>
         </div>
 
-        <!-- Text side -->
-        <div class="about-content">
-          <span class="section-tag">Our Story</span>
+        <div class="about-text">
+          <span class="section-label">Our Story</span>
           <h2 class="section-title">We Build PCs.<br><span>For Every Person.</span></h2>
+          <p class="section-sub">Born out of frustration — watching people overpay for prebuilt machines that underperform.</p>
 
           <p class="about-para">
             <strong>PC Building Boys</strong> was born out of frustration — watching people overpay
@@ -92,9 +102,11 @@
             no overpriced bundles. Just solid, honest PC building advice.
           </p>
 
-          <a href="Mid-Tier_Gaming_Computer.html" class="btn-primary" style="margin-top:8px">
-            <i class="fa-solid fa-rocket"></i> Start Your Build
-          </a>
+          <div style="margin-top:28px">
+            <a href="Mid-Tier_Gaming_Computer.html" class="btn btn-primary">
+              <i class="bi bi-rocket-takeoff"></i> Start Your Build
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -103,32 +115,32 @@
   <hr class="divider">
 
   <!-- Team section -->
-  <section>
-    <div class="section-wrap">
+  <section class="section">
+    <div class="section-inner">
       <div class="reveal">
-        <span class="section-tag">The Team</span>
+        <span class="section-label">The Team</span>
         <h2 class="section-title">Meet the <span>Boys</span></h2>
         <p class="section-sub">The crew behind every build recommendation.</p>
       </div>
 
-      <div class="team-grid reveal-stagger">
+      <div class="team-grid stagger">
         <div class="team-card">
-          <div class="team-avatar">👨‍💻</div>
+          <div class="team-avatar"><i class="bi bi-person-workspace" style="font-size:1.5rem;color:var(--accent-2)"></i></div>
           <div class="team-name">Team Lead</div>
           <div class="team-role">Build Architect</div>
         </div>
         <div class="team-card">
-          <div class="team-avatar">⚙️</div>
+          <div class="team-avatar"><i class="bi bi-cpu" style="font-size:1.5rem;color:var(--accent-2)"></i></div>
           <div class="team-name">Component Expert</div>
           <div class="team-role">Parts Specialist</div>
         </div>
         <div class="team-card">
-          <div class="team-avatar">🎮</div>
+          <div class="team-avatar"><i class="bi bi-controller" style="font-size:1.5rem;color:var(--accent-2)"></i></div>
           <div class="team-name">Gaming Guru</div>
           <div class="team-role">Gaming Builds</div>
         </div>
         <div class="team-card">
-          <div class="team-avatar">🌐</div>
+          <div class="team-avatar"><i class="bi bi-code-slash" style="font-size:1.5rem;color:var(--accent-2)"></i></div>
           <div class="team-name">Web Dev</div>
           <div class="team-role">IT BOAIS Dev</div>
         </div>
@@ -141,7 +153,7 @@
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-brand-name">PC Building Boys</div>
+      <div class="footer-brand"><img src="logo.jpg" alt="PC Building Boys"><span class="footer-brand-name">PC Building Boys</span></div>
       <p class="footer-desc">Your trusted guide to building the perfect custom PC, no matter your budget or use case.</p>
     </div>
     <div class="footer-col">
@@ -168,11 +180,7 @@
   </div>
 </footer>
 
-<div class="toast" id="toast">
-  <span class="toast-icon"><i class="fa-solid fa-circle-check"></i></span>
-  <span class="toast-msg"></span>
-</div>
-
+<div class="toast" id="toast"><i class="bi bi-check-circle-fill"></i><span class="toast-msg"></span></div>
 <script src="index.js"></script>
 </body>
 </html>
